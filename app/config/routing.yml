@@ -1,0 +1,67 @@
+squirrel_permiso:
+    resource: "@SquirrelBundle/Controller/permisoController.php"
+    type:     annotation
+
+squirrel_rol:
+    resource: "@SquirrelBundle/Controller/rolController.php"
+    type:     annotation
+
+squirrel_menu_item:
+    resource: "@SquirrelBundle/Controller/menuItemController.php"
+    type:     annotation
+
+squirrel_usuario:
+    resource: "@SquirrelBundle/Controller/UsuarioController.php"
+    type:     annotation
+
+squirrel_necesita:
+    resource: "@SquirrelBundle/Controller/necesitaController.php"
+    type:     annotation
+
+squirrel_indicador:
+    resource: "@SquirrelBundle/Controller/indicadorController.php"
+    type:     annotation
+
+squirrel_permiso:
+    resource: "@SquirrelBundle/Controller/permisoController.php"
+    type:     annotation
+
+squirrel_resultado:
+    resource: "@SquirrelBundle/Controller/resultadoController.php"
+    type:     annotation
+
+squirrel_objetivo:
+    resource: "@SquirrelBundle/Controller/objetivoController.php"
+    type:     annotation
+
+squirrel_observacion:
+    resource: "@SquirrelBundle/Controller/observacionController.php"
+    type:     annotation
+
+squirrel_estado_proyecto:
+    resource: "@SquirrelBundle/Controller/estadoProyectoController.php"
+    type:     annotation
+
+squirrel_categoria_proyecto:
+    resource: "@SquirrelBundle/Controller/categoriaProyectoController.php"
+    type:     annotation
+
+squirrel_proyecto:
+    resource: "@SquirrelBundle/Controller/proyectoController.php"
+    type:     annotation
+
+squirrel_recurso:
+    resource: "@SquirrelBundle/Controller/recursoController.php"
+    type:     annotation
+
+squirrel_tipo_recurso:
+    resource: "@SquirrelBundle/Controller/tipoRecursoController.php"
+    type:     annotation
+
+squirrel:
+    resource: "@SquirrelBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation

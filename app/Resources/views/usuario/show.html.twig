@@ -1,0 +1,84 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Usuario</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ usuario.id }}</td>
+            </tr>
+            <tr>
+                <th>Nombrecompleto</th>
+                <td>{{ usuario.nombreCompleto }}</td>
+            </tr>
+            <tr>
+                <th>Cargoinstitucional</th>
+                <td>{{ usuario.cargoInstitucional }}</td>
+            </tr>
+            <tr>
+                <th>Username</th>
+                <td>{{ usuario.username }}</td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td>{{ usuario.password }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ usuario.email }}</td>
+            </tr>
+            <tr>
+                <th>Facultadpertenece</th>
+                <td>{{ usuario.facultadPertenece }}</td>
+            </tr>
+            <tr>
+                <th>Idioma</th>
+                <td>{{ usuario.idioma }}</td>
+            </tr>
+            <tr>
+                <th>Preparacionacademica</th>
+                <td>{{ usuario.preparacionAcademica }}</td>
+            </tr>
+            <tr>
+                <th>Capacitacion</th>
+                <td>{{ usuario.capacitacion }}</td>
+            </tr>
+            <tr>
+                <th>Publicacion</th>
+                <td>{{ usuario.publicacion }}</td>
+            </tr>
+            <tr>
+                <th>Isactive</th>
+                <td>{% if usuario.isActive %}Yes{% else %}No{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Createdat</th>
+                <td>{% if usuario.createdAt %}{{ usuario.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Updatedat</th>
+                <td>{% if usuario.updatedAt %}{{ usuario.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Ponencia</th>
+                <td>{{ usuario.ponencia }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('usuario_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('usuario_edit', { 'id': usuario.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

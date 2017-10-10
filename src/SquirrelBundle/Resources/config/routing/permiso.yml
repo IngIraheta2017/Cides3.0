@@ -1,0 +1,24 @@
+permiso_index:
+    path:     /
+    defaults: { _controller: "SquirrelBundle:permiso:index" }
+    methods:  GET
+
+permiso_show:
+    path:     /{id}/show
+    defaults: { _controller: "SquirrelBundle:permiso:show" }
+    methods:  GET
+
+permiso_new:
+    path:     /new
+    defaults: { _controller: "SquirrelBundle:permiso:new" }
+    methods:  [GET, POST]
+
+permiso_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "SquirrelBundle:permiso:edit" }
+    methods:  [GET, POST]
+
+permiso_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "SquirrelBundle:permiso:delete" }
+    methods:  DELETE

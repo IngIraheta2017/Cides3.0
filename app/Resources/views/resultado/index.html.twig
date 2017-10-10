@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Resultados list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Descripcionresultado</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for resultado in resultados %}
+            <tr>
+                <td><a href="{{ path('resultado_show', { 'id': resultado.id }) }}">{{ resultado.id }}</a></td>
+                <td>{{ resultado.descripcionResultado }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('resultado_show', { 'id': resultado.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('resultado_edit', { 'id': resultado.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('resultado_new') }}">Create a new resultado</a>
+        </li>
+    </ul>
+{% endblock %}

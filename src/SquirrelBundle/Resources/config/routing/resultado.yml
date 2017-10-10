@@ -1,0 +1,24 @@
+resultado_index:
+    path:     /
+    defaults: { _controller: "SquirrelBundle:resultado:index" }
+    methods:  GET
+
+resultado_show:
+    path:     /{id}/show
+    defaults: { _controller: "SquirrelBundle:resultado:show" }
+    methods:  GET
+
+resultado_new:
+    path:     /new
+    defaults: { _controller: "SquirrelBundle:resultado:new" }
+    methods:  [GET, POST]
+
+resultado_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "SquirrelBundle:resultado:edit" }
+    methods:  [GET, POST]
+
+resultado_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "SquirrelBundle:resultado:delete" }
+    methods:  DELETE

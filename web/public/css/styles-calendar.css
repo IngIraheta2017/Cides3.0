@@ -1,0 +1,27 @@
+
+#list-activities{
+      display: block;
+}
+#list-act{
+  background-color: #efefef;
+}
+#l-act{
+  padding: 0px;
+}
+.dd-handle {
+  height: auto !important;
+}
+.control-label-act{
+  padding-top: 2%;
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+}
+#a-act{
+  color:white;
+}
+#act-predecesora{
+ margin-bottom: 0px;
+}
+#modal{
+  padding: 10px;
+}

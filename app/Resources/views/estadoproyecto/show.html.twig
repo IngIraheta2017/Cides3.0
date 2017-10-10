@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Estadoproyecto</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ estadoProyecto.id }}</td>
+            </tr>
+            <tr>
+                <th>Nombreestado</th>
+                <td>{{ estadoProyecto.nombreEstado }}</td>
+            </tr>
+            <tr>
+                <th>Descripcionestado</th>
+                <td>{{ estadoProyecto.descripcionEstado }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('estadoproyecto_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('estadoproyecto_edit', { 'id': estadoProyecto.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

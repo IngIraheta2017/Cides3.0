@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Necesitum</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Descripcion_recurso_solicitar</th>
+                <td>{{ necesitum.descripcionrecursosolicitar }}</td>
+            </tr>
+            <tr>
+                <th>Cantidad_recurso_solicitar</th>
+                <td>{{ necesitum.cantidadrecursosolicitar }}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ necesitum.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('necesita_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('necesita_edit', { 'id': necesitum.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

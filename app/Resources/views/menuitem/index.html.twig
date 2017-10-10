@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Menuitems list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Createdat</th>
+                <th>Nombremenu</th>
+                <th>Updatedat</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for menuItem in menuItems %}
+            <tr>
+                <td><a href="{{ path('menuitem_show', { 'id': menuItem.id }) }}">{{ menuItem.id }}</a></td>
+                <td>{% if menuItem.createdAt %}{{ menuItem.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ menuItem.nombremenu }}</td>
+                <td>{% if menuItem.updatedAt %}{{ menuItem.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('menuitem_show', { 'id': menuItem.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('menuitem_edit', { 'id': menuItem.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('menuitem_new') }}">Create a new menuItem</a>
+        </li>
+    </ul>
+{% endblock %}

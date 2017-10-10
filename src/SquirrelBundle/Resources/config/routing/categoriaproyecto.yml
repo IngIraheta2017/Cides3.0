@@ -1,0 +1,24 @@
+categoriaproyecto_index:
+    path:     /
+    defaults: { _controller: "SquirrelBundle:categoriaProyecto:index" }
+    methods:  GET
+
+categoriaproyecto_show:
+    path:     /{id}/show
+    defaults: { _controller: "SquirrelBundle:categoriaProyecto:show" }
+    methods:  GET
+
+categoriaproyecto_new:
+    path:     /new
+    defaults: { _controller: "SquirrelBundle:categoriaProyecto:new" }
+    methods:  [GET, POST]
+
+categoriaproyecto_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "SquirrelBundle:categoriaProyecto:edit" }
+    methods:  [GET, POST]
+
+categoriaproyecto_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "SquirrelBundle:categoriaProyecto:delete" }
+    methods:  DELETE

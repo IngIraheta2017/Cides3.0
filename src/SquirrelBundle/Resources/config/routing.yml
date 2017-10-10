@@ -1,0 +1,65 @@
+squirrel_homepage:
+    path:     /
+    defaults: { _controller: SquirrelBundle:Default:index }
+squirrel_permiso:
+        resource: "@SquirrelBundle/Resources/config/routing/permiso.yml"
+        prefix:   /permiso
+squirrel_usuario:
+        resource: "@SquirrelBundle/Resources/config/routing/usuario.yml"
+        prefix:   /usuario
+squirrel_categoriaproyecto:
+        resource: "@SquirrelBundle/Resources/config/routing/categoriaproyecto.yml"
+        prefix:   /categoriaproyecto
+squirrel_estadoproyecto:
+        resource: "@SquirrelBundle/Resources/config/routing/estadoproyecto.yml"
+        prefix:   /estadoproyecto
+squirrel_indicador:
+        resource: "@SquirrelBundle/Resources/config/routing/indicador.yml"
+        prefix:   /indicador
+squirrel_necesita:
+        resource: "@SquirrelBundle/Resources/config/routing/necesita.yml"
+        prefix:   /necesita
+squirrel_objetivo:
+        resource: "@SquirrelBundle/Resources/config/routing/objetivo.yml"
+        prefix:   /objetivo
+squirrel_observacion:
+        resource: "@SquirrelBundle/Resources/config/routing/observacion.yml"
+        prefix:   /observacion
+squirrel_proyecto:
+        resource: "@SquirrelBundle/Resources/config/routing/proyecto.yml"
+        prefix:   /proyecto
+squirrel_recurso:
+        resource: "@SquirrelBundle/Resources/config/routing/recurso.yml"
+        prefix:   /recurso
+squirrel_resultado:
+        resource: "@SquirrelBundle/Resources/config/routing/resultado.yml"
+        prefix:   /resultado
+squirrel_tiporecurso:
+        resource: "@SquirrelBundle/Resources/config/routing/tiporecurso.yml"
+        prefix:   /tiporecurso
+squirrel_menu:
+    resource: "@SquirrelBundle/Resources/config/routing/menuitem.yml"
+    prefix:   /menu
+squirrel_rol:
+        resource: "@SquirrelBundle/Resources/config/routing/rol.yml"
+        prefix:   /rol
+squirrel_asignacion:
+        resource: "@SquirrelBundle/Resources/config/routing/asignacion.yml"
+        prefix:   /asignacion
+
+# Autentication
+
+cides_homepage:
+    path:     /
+    defaults: { _controller: SquirrelBundle:Default:index }
+
+cides_login:
+    path:     /login
+    defaults: { _controller: SquirrelBundle:Security:login }
+
+cides_login_check:
+    path:     /login_check
+    defaults: { _controller: SquirrelBundle:Security:loginCheck }
+
+cides_logout:
+    path:     /logout

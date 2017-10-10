@@ -1,0 +1,4 @@
+/* Switch button */
+
+.btn-default.btn-on.active{background-color: #00D590;color: white;}
+.btn-default.btn-off.active{background-color: #DA4F49;color: white;}

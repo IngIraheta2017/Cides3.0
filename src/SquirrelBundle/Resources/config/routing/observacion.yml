@@ -1,0 +1,24 @@
+observacion_index:
+    path:     /
+    defaults: { _controller: "SquirrelBundle:observacion:index" }
+    methods:  GET
+
+observacion_show:
+    path:     /{id}/show
+    defaults: { _controller: "SquirrelBundle:observacion:show" }
+    methods:  GET
+
+observacion_new:
+    path:     /new
+    defaults: { _controller: "SquirrelBundle:observacion:new" }
+    methods:  [GET, POST]
+
+observacion_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "SquirrelBundle:observacion:edit" }
+    methods:  [GET, POST]
+
+observacion_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "SquirrelBundle:observacion:delete" }
+    methods:  DELETE

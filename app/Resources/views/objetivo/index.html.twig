@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Objetivos list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Descripcionobjetivo</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for objetivo in objetivos %}
+            <tr>
+                <td><a href="{{ path('objetivo_show', { 'id': objetivo.id }) }}">{{ objetivo.id }}</a></td>
+                <td>{{ objetivo.descripcionObjetivo }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('objetivo_show', { 'id': objetivo.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('objetivo_edit', { 'id': objetivo.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('objetivo_new') }}">Create a new objetivo</a>
+        </li>
+    </ul>
+{% endblock %}

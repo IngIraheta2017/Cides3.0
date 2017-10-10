@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Indicadors list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Descripcionindicador</th>
+                <th>Tipoindicador</th>
+                <th>Nombreindicador</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for indicador in indicadors %}
+            <tr>
+                <td><a href="{{ path('indicador_show', { 'id': indicador.id }) }}">{{ indicador.id }}</a></td>
+                <td>{{ indicador.descripcionIndicador }}</td>
+                <td>{{ indicador.tipoIndicador }}</td>
+                <td>{{ indicador.nombreIndicador }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('indicador_show', { 'id': indicador.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('indicador_edit', { 'id': indicador.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('indicador_new') }}">Create a new indicador</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Necesitas list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Descripcion_recurso_solicitar</th>
+                <th>Cantidad_recurso_solicitar</th>
+                <th>Id</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for necesitum in necesitas %}
+            <tr>
+                <td><a href="{{ path('necesita_show', { 'id': necesitum.id }) }}">{{ necesitum.descripcionrecursosolicitar }}</a></td>
+                <td>{{ necesitum.cantidadrecursosolicitar }}</td>
+                <td>{{ necesitum.id }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('necesita_show', { 'id': necesitum.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('necesita_edit', { 'id': necesitum.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('necesita_new') }}">Create a new necesitum</a>
+        </li>
+    </ul>
+{% endblock %}

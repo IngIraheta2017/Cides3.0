@@ -1,0 +1,24 @@
+necesita_index:
+    path:     /
+    defaults: { _controller: "SquirrelBundle:necesita:index" }
+    methods:  GET
+
+necesita_show:
+    path:     /{id}/show
+    defaults: { _controller: "SquirrelBundle:necesita:show" }
+    methods:  GET
+
+necesita_new:
+    path:     /new
+    defaults: { _controller: "SquirrelBundle:necesita:new" }
+    methods:  [GET, POST]
+
+necesita_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "SquirrelBundle:necesita:edit" }
+    methods:  [GET, POST]
+
+necesita_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "SquirrelBundle:necesita:delete" }
+    methods:  DELETE

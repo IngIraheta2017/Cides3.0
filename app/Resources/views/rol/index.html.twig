@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Rols list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombrerol</th>
+                <th>Createdat</th>
+                <th>Updatedat</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for rol in rols %}
+            <tr>
+                <td><a href="{{ path('rol_show', { 'id': rol.id }) }}">{{ rol.id }}</a></td>
+                <td>{{ rol.nombreRol }}</td>
+                <td>{% if rol.createdAt %}{{ rol.createdAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if rol.updatedAt %}{{ rol.updatedAt|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('rol_show', { 'id': rol.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('rol_edit', { 'id': rol.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('rol_new') }}">Create a new rol</a>
+        </li>
+    </ul>
+{% endblock %}

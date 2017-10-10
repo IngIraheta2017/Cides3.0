@@ -1,0 +1,24 @@
+recurso_index:
+    path:     /
+    defaults: { _controller: "SquirrelBundle:recurso:index" }
+    methods:  GET
+
+recurso_show:
+    path:     /{id}/show
+    defaults: { _controller: "SquirrelBundle:recurso:show" }
+    methods:  GET
+
+recurso_new:
+    path:     /new
+    defaults: { _controller: "SquirrelBundle:recurso:new" }
+    methods:  [GET, POST]
+
+recurso_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "SquirrelBundle:recurso:edit" }
+    methods:  [GET, POST]
+
+recurso_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "SquirrelBundle:recurso:delete" }
+    methods:  DELETE

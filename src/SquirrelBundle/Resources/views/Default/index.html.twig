@@ -1,0 +1,62 @@
+{% extends 'baseFront.html.twig'%}
+{% block stylesheets %}
+   <link href="{{asset('public/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{asset('public/css/estiloSlide.css')}}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+  {{parent()}}
+  <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
+  <!-- Overlay -->
+  <div class="overlay"></div>
+
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#bs-carousel" data-slide-to="1"></li>
+    <li data-target="#bs-carousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item slides active">
+      <div class="slide-1"></div>
+      <div class="hero">
+        <hgroup>
+            <h1>SQUIRREL</h1>
+            <h3>Un sistema para la gestión de proyectos de invistigación de la informática</h3>
+        </hgroup>
+        <a href="{{asset('login')}}" >
+
+        <button class="btn btn-hero btn-lg" role="button" >Inicia Sesión</button></a>
+      </div>
+    </div>
+    <div class="item slides">
+      <div class="slide-2"></div>
+      <div class="hero">
+        <hgroup>
+            <h1>CIDES</h1>
+            <h5>Centro de Investigación y Desarrollo de Software</h5>
+        </hgroup>
+        <a href="{{asset('registro')}}" >
+        <button class="btn btn-hero btn-lg" role="button">Regístrate</button></a>
+      </div>
+    </div>
+    <div class="item slides">
+      <div class="slide-3"></div>
+      <div class="hero">
+        <hgroup>
+            <h1>We are amazing</h1>
+            <h5>Get start your next awesome project</h5>
+        </hgroup>
+        <button class="btn btn-hero btn-lg" role="button">See all features</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block javascripts %}
+     <script src="{{asset('public/js/jquery.js')}}"></script>
+    <script src="{{asset('public/js/jquery-1.8.3.min.js')}}"></script>
+    <script src="{{asset('public/js/bootstrap.min.js')}}"></script>
+{% endblock %}
